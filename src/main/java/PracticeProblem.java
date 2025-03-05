@@ -18,19 +18,19 @@ public class PracticeProblem {
 				file += (char) reader.read();
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("File doesn't exist");
+			System.out.println(e);
 		} catch (IOException e) {
-			System.out.println("Something went wrong during reading");
+			System.out.println(e);
 		} finally {
 			try {
 				if (reader != null) {
 					reader.close();
 				}
 			} catch (IOException e) {
-				System.out.println("Something went wrong during closing file stream");
+				System.out.println(e);
 			}
 		}
-		return file.strip();
+		return file;
 	}
 
 	public static String backwardsReadFile(String fileName) {
@@ -42,18 +42,18 @@ public class PracticeProblem {
 				file = (char) reader.read() + file;
 			}
 		} catch (FileNotFoundException e) {
-			System.out.println("File doesn't exist");
+			System.out.println(e);
 		} catch (IOException e) {
-			System.out.println("Something went wrong during reading");
+			System.out.println(e);
 		} finally {
 			try {
 				if (reader != null) {
 					reader.close();
 				}
 			} catch (IOException e) {
-				System.out.println("Something went wrong during closing file stream");
+				System.out.println(e);
 			}
 		}
-		return file.strip();
+		return file;
 	}
 }
